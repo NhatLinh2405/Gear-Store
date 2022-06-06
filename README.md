@@ -8,17 +8,20 @@ Day 1:
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
-First  -> run: npm i --legacy-peer-deps
+- First  -> run: npm i --legacy-peer-deps
 
-Second -> run in Sanity: sanity install
+- Second -> run in Sanity: sanity install
 
-Now, run the development server:
+- Now, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-```
+
+- Connect backend: sanity start
+
+- Open manage: sanity manage
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
