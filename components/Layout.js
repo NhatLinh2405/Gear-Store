@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-// ko cothi cha bao loi ?
+
 export default function Layout({ children }) {
     return (
         <div className="layout">
