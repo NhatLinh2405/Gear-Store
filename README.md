@@ -1,9 +1,14 @@
-Day 1: 
+**Day 1: **
  - Setup Sanity
  - Homepage
  - Hook up Sanity
  - Products
  - Layout
+
+**Day 2: **
+ - Product Details
+ - Context Logic
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
