@@ -1,13 +1,6 @@
 import React from "react";
 import { client } from "../lib/client";
-import {
-    Product,
-    Footer,
-    FooterBanner,
-    HeroBanner,
-    Navbar,
-    Cart,
-} from "../components";
+import { Cards, FooterBanner, HeroBanner } from "../components";
 
 const Home = ({ products, bannerData }) => {
     return (
@@ -17,11 +10,8 @@ const Home = ({ products, bannerData }) => {
                 <h2>Best Selling Products</h2>
                 <p>Speakers of many variations</p>
             </div>
-            <div className="products-container">
-                {products?.map((product) => (
-                    <Product key={product._id} product={product} />
-                ))}
-            </div>
+            <Cards products={products} type="product" />
+
             <FooterBanner footerBanner={bannerData.length && bannerData[0]} />
         </>
     );
