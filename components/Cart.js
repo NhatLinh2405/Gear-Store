@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import { urlFor } from "../lib/client";
 import getStripe from "../lib/getStripe";
 
+
 import { useStateContext } from "../context/StateContext";
 
 import { TiDeleteOutline } from "react-icons/ti";
@@ -31,7 +32,7 @@ export default function Cart() {
             body: JSON.stringify(cartItems),
         });
         if (response.statusCode === 500) return;
-        const data = response.json();
+        const data = await response.json();
         toast.loading("Processing payment...");
         stripe.redirectToCheckout({ sessionId: data.id });
     };
