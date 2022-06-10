@@ -1,10 +1,7 @@
 import React from "react";
 import Link from "next/link";
-<<<<<<< HEAD
+
 import { AiOutlineShopping, AiOutlineMenu } from "react-icons/ai";
-=======
-import { AiOutlineShopping } from "react-icons/ai";
->>>>>>> ceeeaee56993f2418a82762759eaa3d24f1b41f6
 
 import Cart from "./Cart";
 import { useStateContext } from "../context/StateContext";
