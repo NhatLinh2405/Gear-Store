@@ -14,7 +14,21 @@ import {
 } from "react-icons/ai";
 
 const ProductDetails = ({ product, products }) => {
-    const { image, name, detail, price } = product;
+    const {
+        image,
+        name,
+        detail,
+        price,
+        color,
+        led,
+        materials,
+        sensitivity,
+        numberOfButtons,
+        longevity,
+        size,
+        weight,
+        Switch,
+    } = product;
     const [index, setIndex] = useState(0);
     const { decQty, incQty, qty, addToCart, setShowCart } = useStateContext();
 
@@ -52,16 +66,83 @@ const ProductDetails = ({ product, products }) => {
                 </div>
                 <div className="product-detail-desc">
                     <h1>{name}</h1>
-                    <div className="reviews">
-                        <AiFillStar />
-                        <AiFillStar />
-                        <AiFillStar />
-                        <AiFillStar />
-                        <AiOutlineStar />
-                    </div>
-                    <p>(20)</p>
                     <h4>Detail:</h4>
                     <p>{detail}</p>
+                    <table>
+                        <tr>
+                            <td>
+                                <h4>Weight:</h4>
+                            </td>
+                            <td>
+                                <p>{weight}g</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Color:</h4>
+                            </td>
+                            <td>
+                                <p>{color}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Size:</h4>
+                            </td>
+                            <td>
+                                <p>{size}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Switch:</h4>
+                            </td>
+                            <td>
+                                <p>{Switch}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>LED:</h4>
+                            </td>
+                            <td>
+                                <p>{led}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Materials:</h4>
+                            </td>
+                            <td>
+                                <p>{materials}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Longevity:</h4>
+                            </td>
+                            <td>
+                                <p>{longevity}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Sensitivity:</h4>
+                            </td>
+                            <td>
+                                <p>{sensitivity}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Number Of Button:</h4>
+                            </td>
+                            <td>
+                                <p>{numberOfButtons}</p>
+                            </td>
+                        </tr>
+                    </table>
+
                     <p className="price">$ {price}</p>
                     <div className="quantity">
                         <h3>Quantity:</h3>
@@ -108,5 +189,3 @@ const ProductDetails = ({ product, products }) => {
 };
 
 export default ProductDetails;
-
-

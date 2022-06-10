@@ -13,13 +13,13 @@ const Home = ({ products }) => {
                     for the wall design.
                 </p>
             </div>
-            <Cards products={products} type="mount" />
+            <Cards products={products} type="mouse" />
         </>
     );
 };
 
 export const getServerSideProps = async () => {
-    const query = '*[_type == "mount"]';
+    const query = '*[_type == "mouse"]';
     const products = await client.fetch(query);
 
     return {

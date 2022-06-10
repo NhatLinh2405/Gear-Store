@@ -2,12 +2,12 @@ import React from "react";
 import { client } from "../../lib/client";
 import { ProductDetails } from "../../components";
 
-const Mount = ({ product, products }) => {
+const CurrentMount = ({ product, products }) => {
     return <ProductDetails products={products} product={product} />;
 };
 
 export const getStaticPaths = async () => {
-    const query = `*[_type == "mount"] {
+    const query = `*[_type == "mouse"] {
       slug {
         current
       }
@@ -29,8 +29,8 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params: { slug } }) => {
-    const query = `*[_type == "mount" && slug.current == '${slug}'][0]`;
-    const productsQuery = '*[_type == "mount"]';
+    const query = `*[_type == "mouse" && slug.current == '${slug}'][0]`;
+    const productsQuery = '*[_type == "mouse"]';
 
     const product = await client.fetch(query);
     const products = await client.fetch(productsQuery);
@@ -40,4 +40,4 @@ export const getStaticProps = async ({ params: { slug } }) => {
     };
 };
 
-export default Mount;
+export default CurrentMount;

@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { AiOutlineShopping } from "react-icons/ai";
-import { GiHamburgerMenu } from "react-icons/Gi";
+import { AiOutlineShopping, AiOutlineMenu } from "react-icons/ai";
 
 import Cart from "./Cart";
 import { useStateContext } from "../context/StateContext";
@@ -19,29 +18,31 @@ export default function Navbar() {
     };
 
     return (
-        <div className="navbar">
-            <div className="navbar-container">
-                <div className="header-right" id="topNav">
-                    <Link href="/" onClick={showLinks}>
-                        Shadow Gear
-                    </Link>
-                    <Link href="/cards">Cards</Link>
-                    <Link href="/posters">Posters</Link>
-                    <Link href="/mount">Mount</Link>
-                </div>
-                {/* <button type="button" className="icon" onClick={() => showLinks()}>
-                <GiHamburgerMenu />
-            </button> */}
+        <div className="navbar-container">
+            <div className="header-right" id="topNav">
+                <Link href="/" onClick={showLinks}>
+                    Shadow Gear
+                </Link>
+                <Link href="/headphones">Headphone</Link>
+                <Link href="/keyboard">Keyboard</Link>
+                <Link href="/mouse">Mouse</Link>
                 <button
                     type="button"
+                    className="icon"
+                    onClick={() => showLinks()}
+                >
+                    <AiOutlineMenu />
+                </button>
+                <button
+                    type=""
                     className="cart-icon"
                     onClick={() => setShowCart(true)}
                 >
                     <AiOutlineShopping />
-                    <span className="cart-item-qty">{totalQuantities}</span>
+                    <div className="cart-item-qty">{totalQuantities}</div>
                 </button>
-                {showCart && <Cart />}
             </div>
+            {showCart && <Cart />}
         </div>
     );
 }

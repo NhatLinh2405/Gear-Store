@@ -25,21 +25,36 @@ a {
 }
 
 /* Navbar */
-.navbar {
-    background-color: #ff7800;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+.cart-icon,
+.header-right button {
+    border: none;
+    background-color: transparent;
 }
 
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
+.cart-icon {
+    float: right;
+    height: 100%;
+}
+
+.cart-item-qty {
     position: relative;
-    padding: 0 20px;
+    display: inline-block;
+    top: -25px;
+    right: 10px;
+    font-size: 12px;
+    color: #eee;
+    background-color: #f02d34;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.header-right {
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    background-color: #ff7800;
 }
 
 /* Header - start*/
@@ -48,16 +63,21 @@ a {
     height: 100%;
 }
 
-.header-right a,
-.header-right button {
+.header-right a {
     color: #f2f2f2;
     text-align: center;
     padding: 20px 16px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
     letter-spacing: 1px;
     transition: transform 0.5s ease;
+}
+
+.header-right a:hover,
+.header-right button:hover {
+    color: black;
+    transform: scale(1.1, 1.1);
 }
 
 .header-right a:hover,
@@ -70,9 +90,11 @@ a {
     display: none;
 }
 
-.cart-icon {
+button.cart-icon,
+button.icon {
     font-size: 35px;
-    color: white;
+    padding: 10px 16px;
+    color: white ;
     cursor: pointer;
     position: relative;
     transition: transform 0.4s ease;
@@ -83,19 +105,7 @@ a {
 .cart-icon:hover,
 .btn:hover {
     transform: scale(1.1, 1.1);
-}
-
-.cart-item-qty {
-    position: absolute;
-    right: -8px;
-    font-size: 12px;
-    color: #eee;
-    background-color: #000000;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    text-align: center;
-    font-weight: 600;
+    color: black;
 }
 
 .marquee-text {
@@ -148,6 +158,30 @@ a {
     font-weight: 800;
     margin-top: 6px;
     color: black;
+}
+
+.products-banner {
+    height: 150px;
+    padding: 10px 40px;
+}
+
+.hero-banner-container,
+.products-banner {
+    background-color: #dcdcdc;
+    position: relative;
+    line-height: 0.9;
+    width: 100%;
+}
+
+.products-banner h3 {
+    margin-top: 2%;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-banner-container h3,
+.products-banner h3 {
+    font-size: 40px;
 }
 
 .products-heading {
@@ -296,7 +330,7 @@ a {
     font-weight: 500;
     cursor: pointer;
     z-index: 10000 !important;
-        transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 .hero-banner-container h3 {
@@ -385,11 +419,12 @@ a {
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
-        transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
+
 .banner-desc button:hover,
 .hero-banner-container button:hover {
-    transform: scale(1.1,1.1);
+    transform: scale(1.1, 1.1);
 }
 
 .banner-desc .left h3 {
@@ -611,6 +646,7 @@ a {
 .buttons .buy-now:hover {
     transform: scale(1.1, 1.1);
 }
+
 /* Button - end*/
 
 .small-images-container {
@@ -763,6 +799,36 @@ a {
 span.text-red {
     -webkit-text-stroke: 1px #ff7800;
     margin-left: 6px;
+}
+
+@media screen and (max-width: 600px) {
+    .header-right a:not(:first-child) {
+        display: none;
+    }
+
+    .header-right button.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .header-right.responsive {
+        position: relative;
+    }
+
+    .header-right.responsive button.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .header-right.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 }
 
 @media screen and (max-width: 800px) {
