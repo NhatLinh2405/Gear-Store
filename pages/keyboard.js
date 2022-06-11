@@ -7,19 +7,19 @@ const Home = ({ products }) => {
     return (
         <>
             <div className="products-banner">
-                <h3>Mount</h3>
+                <h3>Keyboard</h3>
                 <p>
-                    Todays gaming mouse is optimized, besides the powerful
-                    design helps gamers feel the power in their hands!
+                    Gaming keyboards will help players to have a better
+                    experience for gaming, which is the norm for todays gamers.
                 </p>
             </div>
-            <Cards products={products} type="mouse" />
+            <Cards products={products} type="keyboard" />
         </>
     );
 };
 
 export const getServerSideProps = async () => {
-    const query = '*[_type == "mouse"]';
+    const query = '*[_type == "keyboard"]';
     const products = await client.fetch(query);
 
     return {

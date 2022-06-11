@@ -24,7 +24,7 @@ export default function Navbar() {
                 <Link href="/" onClick={showLinks}>
                     Shadow Gear
                 </Link>
-                <Link href="/headphones">Headphone</Link>
+                <Link href="/headphone">Headphone</Link>
                 <Link href="/keyboard">Keyboard</Link>
                 <Link href="/mouse">Mouse</Link>
                 <button
