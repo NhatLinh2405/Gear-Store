@@ -36,5 +36,40 @@ export default {
             title: "Detail",
             type: "string",
         },
+        {
+            name: "trademark",
+            title: "Trademark",
+            type: "string",
+        },
+        {
+            name: "sensitivity",
+            title: "Sensitivity",
+            type: "string",
+        },
+        {
+            name: "connect",
+            title: "Connect",
+            type: "string",
+        },
+        {
+            name: "color",
+            title: "Color",
+            type: "string",
+        },
+        {
+            name: "compatible",
+            title: "Compatible",
+            type: "string",
+        },
+        {
+            name: "led",
+            title: "LED",
+            type: "string",
+        },
+        {
+            name: "weight",
+            title: "Weight",
+            type: "number",
+        },
     ],
 };

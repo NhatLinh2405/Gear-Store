@@ -1,6 +1,6 @@
 export default {
     name: "headphone",
-    title: "Headphones",
+    title: "Headphone",
     type: "document",
     fields: [
         {

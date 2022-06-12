@@ -17,6 +17,10 @@ a {
     text-decoration: none;
 }
 
+
+table td p{
+    margin-left: 20px
+}
 .main-container {
     max-width: 1400px;
     margin: auto;
