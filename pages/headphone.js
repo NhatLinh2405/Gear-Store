@@ -7,9 +7,9 @@ const Home = ({ products }) => {
     return (
         <>
             <div className="products-banner">
-                <h3>Keyboard</h3>
+                <h3>Headphones</h3>
                 <p>
-                    Gaming keyboards will help players to have a better
+                    Gaming headphone will help players to have a better
                     experience for gaming, which is the norm for todays gamers.
                 </p>
             </div>

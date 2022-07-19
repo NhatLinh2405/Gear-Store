@@ -374,13 +374,20 @@ button.icon {
     width: 100%;
 }
 
-.hero-banner-container,
-.products-banner {
+.hero-banner-container .products-banner{
     background-color: #dcdcdc;
     position: relative;
     line-height: 1;
     width: 100%;
     height: 500px;
+}
+
+.products-banner {
+    background-color: #dcdcdc;
+    position: relative;
+    line-height: 1;
+    width: 100%;
+    height: 180px;
 }
 
 .hero-banner-container .beats-solo {
